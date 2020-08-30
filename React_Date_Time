@@ -10,6 +10,9 @@ const App = () => {
     time = new Date().toLocaleTimeString();
     setTime(time);
   };
+  
+   //Automatically update time
+  setInterval(UpdateTime, 1000);
 
   return (
     <>
