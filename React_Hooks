@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./styles.css";
 
-//This is Fat Arrow function
+//Fat Arrow function
 const App = () => {
+//Hooks in React
   const state = useState();
   console.log(state);
 
