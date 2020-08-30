@@ -10,16 +10,29 @@ const App = () => {
     time = new Date().toLocaleTimeString();
     setTime(time);
   };
-  
-   //Automatically update time
+
+//Using hooks change color particular state
+  const color = "purple";
+  const [bg, setbg] = useState(color);
+
+  const bgChange = () => {
+    console.log("clicked");
+    let setColor = "red";
+    setbg(setColor);
+  };
+
+  //Automatically update time
   setInterval(UpdateTime, 1000);
 
   return (
     <>
-      <h1>{ctime}</h1>
-      <button onClick={UpdateTime}>Get Time</button>
+      <div style={{ backgroundColor: bg }}>
+        <h1>{ctime}</h1>
+        <button onClick={bgChange}>Click me</button>
+      </div>
     </>
   );
 };
 
 export default App;
+
